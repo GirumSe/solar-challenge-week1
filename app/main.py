@@ -4,7 +4,7 @@
 # Import necessary libraries
 
 import streamlit as st
-from app.utils import load_clean_data, plot_boxplot
+from utils import load_clean_data, plot_boxplot
 
 # --- Title and Sidebar ---
 st.set_page_config(page_title="Solar Data Dashboard", layout="wide")
