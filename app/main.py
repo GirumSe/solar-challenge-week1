@@ -17,7 +17,7 @@ st.write("Welcome to the solar data comparison dashboard!")
 selected_countries = st.sidebar.multiselect(
     "Select countries to compare:",
     options=["Benin", "Sierra Leone", "Togo"],
-    default=["Benin", "Sierra Leone", "Togo"]
+    default=["benin-malanville", "sierraleone-bumbuna", "togo-dapaong_qc"]
 )
 
 selected_metric = st.sidebar.selectbox(
