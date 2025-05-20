@@ -4,7 +4,7 @@
 # Import necessary libraries
 
 import streamlit as st
-from app.utils import load_clean_data
+from app.utils import load_clean_data, plot_boxplot
 
 # --- Title and Sidebar ---
 st.set_page_config(page_title="Solar Data Dashboard", layout="wide")
@@ -27,3 +27,7 @@ selected_metric = st.sidebar.selectbox(
 
 # --- Load Data ---
 df = load_clean_data(selected_countries)
+
+# --- Visualization ---
+st.subheader(f"Distribution of {selected_metric} Across Selected Countries")
+plot_boxplot(df, selected_metric)
