@@ -4,12 +4,13 @@
 # Import necessary libraries
 
 import streamlit as st
+from app.utils import load_clean_data
 
-
-
+# --- Title and Sidebar ---
 st.set_page_config(page_title="Solar Data Dashboard", layout="wide")
 st.title("☀️ Solar Radiation Comparison Dashboard")
 
+# --- Sidebar ---
 st.sidebar.header("Filter Options")
 st.write("Welcome to the solar data comparison dashboard!")
 
@@ -24,4 +25,5 @@ selected_metric = st.sidebar.selectbox(
     options=["GHI", "DNI", "DHI"]
 )
 
-
+# --- Load Data ---
+df = load_clean_data(selected_countries)
