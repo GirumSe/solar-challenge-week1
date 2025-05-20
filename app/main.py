@@ -14,21 +14,21 @@ st.title("☀️ Solar Radiation Comparison Dashboard")
 st.sidebar.header("Filter Options")
 st.write("Welcome to the solar data comparison dashboard!")
 
-# Country name -> ID mapping
+# Mapping from display name -> ID
 country_id_map = {
     "Benin": "benin-malanville",
     "Sierra Leone": "sierraleone-bumbuna",
     "Togo": "togo-dapaong_qc"
 }
 
-# Show user-friendly names in the multiselect
+# Display names for multiselect
 selected_country_names = st.sidebar.multiselect(
     "Select countries to compare:",
     options=list(country_id_map.keys()),
     default=["Benin", "Sierra Leone", "Togo"]
 )
 
-# Convert selected names to IDs
+# Convert display names to IDs
 selected_country_ids = [country_id_map[name] for name in selected_country_names]
 
 # Metric selection
