@@ -37,8 +37,13 @@ selected_metric = st.sidebar.selectbox(
     options=["GHI", "DNI", "DHI"]
 )
 
-# --- Load and Visualize Data ---
-df = load_clean_data(selected_country_ids)
-
-st.subheader(f"Distribution of {selected_metric} Across Selected Countries")
-plot_boxplot(df, selected_metric)
+# --- Conditional Logic: Don't run if no countries selected ---
+if not selected_country_ids:
+    # If no countries are selected, show a warning message
+    st.warning("⚠️ Please select at least one country to visualize data.")
+else:
+    # --- Load and Clean Data ---
+    df = load_clean_data(selected_country_ids, name_map={v: k for k, v in country_id_map.items()})
+    # --- Main Content ---
+    st.subheader(f"Distribution of {selected_metric} Across Selected Countries")
+    plot_boxplot(df, selected_metric)
