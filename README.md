@@ -105,7 +105,7 @@ Performed exploratory data analysis for Benin, Sierra Leone, and Togo:
 🔗 **Live Dashboard:** [week1-solar-challenge-girum.streamlit.app](https://week1-solar-challenge-girum.streamlit.app/)
 #### 🖥 Dashboard Preview
 
-![Streamlit Dashboard Screenshot](screenshots/dashboard_screenshot.png)
+![Streamlit Dashboard Screenshot](dashboard_screenshots/dashboard_screenshot.png)
 
 ---
 
